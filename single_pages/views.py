@@ -10,5 +10,5 @@ def landing(request):
 def about_me(request):
     return render(
         request,
-        'single_pages/about.html'
+        'single_pages/about_me.html'
     )
