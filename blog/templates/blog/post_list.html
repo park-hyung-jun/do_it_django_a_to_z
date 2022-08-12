@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    </title>Blog</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="{% static 'blog/bootstrap5/css/bootstrap.min.css' %}" type="text/css">
 
     <script src="https://kit.fontawesome.com/b5e269ebcf.js" crossorigin="anonymous"></script>
@@ -83,21 +83,23 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container" id='main-area'>
         <div class="row my-3">
             <div class="col-md-8 col-lg-9">
                 <h1>Blog</h1>
                 <!-- Blog post-->
+
+                {% if post_list.exists %}
                 {% for p in post_list %}
                 <div class="card mb-4">
                     {% if p.head_image %}
                     <a href="{{p.get_absolute_url}}">
                         <img class="card-img-top" src="{{p.head_image.url}}"
-                            alt="{{p}} head image"></a>
+                             alt="{{p}} head image"></a>
                     {% else %}
                     <a href="{{p.get_absolute_url}}">
                         <img class="card-img-top" src="https://picsum.photos/seed/{{ p.id }}/600/200"
-                            alt="{{p}} head image"></a>
+                             alt="{{p}} head image"></a>
                     {% endif %}
                     <div class="card-body">
                         <div class="small text-muted">Posted on {{ p.created_at }} by
@@ -105,13 +107,16 @@
                         </div>
                         <h2 class="card-title h4">{{ p.title }}</h2>
                         {% if p.hook_text %}
-                            <h5 class="text-muted">{{ p.hook_text}}</h5>
+                        <h5 class="text-muted">{{ p.hook_text}}</h5>
                         {% endif %}
                         <p class="card-text">{{ p.content | truncatewords:30 }}</p>
                         <a class="btn btn-primary" href="{{ p.get_absolute_url }}">Read more →</a>
                     </div>
                 </div>
                 {% endfor %}
+                {% else %}
+                    <h1>아직 게시물이 없습니다.</h1>
+                {% endif %}
             </div>
             <div class="col-md-4 col-lg-3">
                 <!-- Search widget-->
