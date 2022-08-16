@@ -1,4 +1,5 @@
 from django.db import models     # 모델을 수정하면 마이그레이션 진행!!!!!
+import django.contrib.auth.models import User
 import os
 
 class Post(models.Model):
@@ -11,10 +12,12 @@ class Post(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     file_upload= models.FileField(upload_to='blog/files/%Y/%m/%d/', blank=True)
 
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+
 # author: 추후작성 예정
 # Creat
     def __str__(self):
-        return f'[{self.pk}] {self.title}'
+        return f'[{self.pk}] {self.title} :: {self.author}'
 
     def get_absolute_url(self):
         return f'/blog/{self.pk}/'
