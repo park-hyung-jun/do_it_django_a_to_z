@@ -12,7 +12,7 @@ class Post(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     file_upload= models.FileField(upload_to='blog/files/%Y/%m/%d/', blank=True)
 
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
 
 # author: 추후작성 예정
 # Creat
