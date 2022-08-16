@@ -1,5 +1,5 @@
 from django.db import models     # 모델을 수정하면 마이그레이션 진행!!!!!
-import django.contrib.auth.models import User
+from django.contrib.auth.models import User
 import os
 
 class Post(models.Model):
