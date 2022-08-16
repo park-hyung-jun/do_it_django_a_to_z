@@ -2,6 +2,16 @@ from django.db import models     # 모델을 수정하면 마이그레이션 진
 from django.contrib.auth.models import User
 import os
 
+class Category(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+    slug = models.SlugField(max_length=200, unique=True, allow_unicode=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural= 'Categories'
+
 class Post(models.Model):
     title = models.CharField(max_length=30)
     hook_text = models.CharField(max_length=100, blank=True)
@@ -13,6 +23,8 @@ class Post(models.Model):
     file_upload= models.FileField(upload_to='blog/files/%Y/%m/%d/', blank=True)
 
     author = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
+
+    category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL)
 
 # author: 추후작성 예정
 # Creat
