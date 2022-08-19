@@ -1,20 +1,92 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>개발자 달타냥입니다</title>
+    <title> About 달타냥 </title>
+
+    <link href="{% static 'blog/bootstrap5/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="screen">
+    <link href="{% static 'single_pages/css/about_me.css' %}" rel="stylesheet" type="text/css" media="screen">
+
+    <script src="https://kit.fontawesome.com/9c6355ff01.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<nav>
-    <a href="/blog/">Blog</a>
-    <a href="/about_me/">About me</a>
-</nav>
+<section>
+    <div class="container" mt-4>
+        <div class="row">
+            <div class="col-lg-8 text-black">
+                <h1> 안냥하세요 달타냥입니다. </h1>
+                <br/>
+                <p class="lead">
+                    블로그 자주오세요~ <br/>
+                    데이터 분석 잘하고 축구도 잘합니다.
+                </p>
 
-<h1> 안녕하세요 달타냥입니다 </h1>
-<h2> 이력 </h2>
-<h2> Portfolio </h2>
-<h3> 아직 공사중입니다. </h3>
+                <ul>
+                    <li>WORK PASSIN</li>
+                    <ul>
+                        <li>스타트업 기업- 빅데이터 분석 (2022.12~)</li>
+                        <li>카카오 마케팅 분석 (2027.3~)</li>
+                    </ul>
+                    <li>EDUCATION</li>
+                    <ul>
+                        <li>부경대학교 생물공학과 졸업(2014.03 ~ 2023.02)</li>
+                        <li>디지털 스마트 부산 아카데미(2022.07 ~ 2022.12)</li>
+                    </ul>
+            </div>
+             <div class="col-lg-4">
+                  <img class='img-fluid' src="{% static 'single_pages/images/django.jpg' %}">
+             </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light margin-for-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>PORTFOLIO</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#modal_a">
+                    <img class="card-img-top" src="{% static 'single_pages/images/modal1.jfif' %}">
+                    <div class="card-body">
+                        <h5 class="card-title"> 삼성 z플립4 </h5>
+                        <p>삼성에서 z플립4를 신제품으로 내놓았습니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#modal_b">
+                    <img class="card-img-top" src="{% static 'single_pages/images/modal2.jfif' %}">
+                    <div class="card-body">
+                        <h5 class="card-title"> 삼성 갤럭시북2 Pro </h5>
+                        <p>삼성에서 갤럭시북2 Pro를 신제품으로 내놓았습니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#modal_c">
+                    <img class="card-img-top" src="{% static 'single_pages/images/modal3.jfif' %}">
+                    <div class="card-body">
+                        <h5 class="card-title"> 삼성 갤럭시탭 S8 Ultra </h5>
+                        <p>삼성에서 갤럭시탭 S8 Ultra를 신제품으로 내놓았습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="fixed-bottom">
+{% include 'blog/footer.html' %}
+</div>
 
 </body>
 </html>
