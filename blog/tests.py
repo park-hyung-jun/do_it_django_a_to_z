@@ -267,3 +267,7 @@ class TestView(TestCase):
         self.assertIn('한글 태그', main_area.text)
         self.assertIn('some tag', main_area.text)
         self.assertNotIn('python', main_area.text)
+
+
+    def test_search(self):
+
