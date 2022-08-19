@@ -5,17 +5,14 @@
     {% if user.is_authenticated %}
         {% if user.is_superuser or user.is_staff %}
             <a class="btn btn-outline-success btn-sm float-end" href="/blog/create_post/" type="button">
-                <i class="fas fa-pen"></i>&nbsp;&nbsp;New Post</a>
+                <i class="fas fa-pen"></i> New Post </a>
         {% endif %}
     {% endif %}
 <h1>
     Blog
-    {% if category %}
-        <span class="badge rounded-pill bg-warning text-dark">{{ category }}</span>
-    {% endif %}
-    {% if tag %}
-        <span class="badge bg-light text-dark"><i class='fas fa-tags'></i>{{ tag }} ({{ tag.post_set.count }})</span>
-    {% endif %}
+    {% if search_info %}<small class="text-muted">{{ search_info }}</small>{% endif %}
+    {% if category %}<span class="badge rounded-pill bg-warning text-dark">{{ category }}</span>{% endif %}
+    {% if tag %}<span class="badge bg-light text-dark"><i class='fas fa-tags'></i>{{ tag }} ({{ tag.post_set.count }})</span>{% endif %}
 </h1>
 
 {% if post_list.exists %}
