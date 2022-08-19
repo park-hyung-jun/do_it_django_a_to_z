@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="bdb70d2d-1153-4238-af45-1e022467f932" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/single_pages/templates/single_pages/landing.html" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/landing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single_pages/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single_pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +51,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\github\do_it_django_a_to_z\blog\templates\blog" />
       <recent name="C:\github\do_it_django_a_to_z\blog" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\github\do_it_django_a_to_z\single_pages\static\single_pages\images" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
